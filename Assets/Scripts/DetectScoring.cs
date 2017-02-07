@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DetectScoring : MonoBehaviour {
 
@@ -7,7 +8,10 @@ public class DetectScoring : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		// Load Scene
+		int currentIndex = SceneManager.GetActiveScene().buildIndex;
+		// Load currentIndex + 1
+		SceneManager.LoadScene(currentIndex + 1);
 	}
 	
 	// Update is called once per frame
